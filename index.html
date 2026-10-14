@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src https:; media-src https:; frame-src https://www.youtube-nocookie.com; connect-src https://raw.githubusercontent.com; base-uri 'none'; form-action 'none'">
+<title>SCOTTY, The King of the Prehistoric World</title>
+<meta name="description" content="SCOTTY, an exceptionally enormous adult Tyrannosaurus rex.">
+<meta name="theme-color" content="#0a110b">
+<link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- Prehistoric environment: one static SVG, two slow mist layers, no video, no canvas -->
+<div class="scene" aria-hidden="true">
+  <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0b140d"/>
+        <stop offset=".45" stop-color="#1b2b1e"/>
+        <stop offset=".78" stop-color="#394a31"/>
+        <stop offset="1" stop-color="#2b2a1b"/>
+      </linearGradient>
+      <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+        <stop offset="0" stop-color="#e8b45c" stop-opacity=".55"/>
+        <stop offset=".4" stop-color="#c98d3a" stop-opacity=".18"/>
+        <stop offset="1" stop-color="#c98d3a" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f0c273" stop-opacity=".17"/>
+        <stop offset="1" stop-color="#f0c273" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#9aaa90" stop-opacity="0"/>
+        <stop offset=".55" stop-color="#9aaa90" stop-opacity=".2"/>
+        <stop offset="1" stop-color="#9aaa90" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0a120b" stop-opacity="0"/>
+        <stop offset="1" stop-color="#050805" stop-opacity=".95"/>
+      </linearGradient>
+      <path id="frond" d="M0 0C14-90 70-170 150-200C96-140 52-72 30 0Z"/>
+    </defs>
+
+    <rect width="1600" height="900" fill="url(#sky)"/>
+    <circle cx="1080" cy="190" r="460" fill="url(#sun)"/>
+
+    <!-- rocky cliffs on the far side of the valley -->
+    <path fill="#1d2c20" d="M0 560L90 520L150 540L250 470L310 500L420 440L500 490L610 450L700 500L820 455L900 505L1010 470L1110 520L1210 480L1320 530L1420 495L1520 540L1600 520V900H0Z"/>
+
+    <!-- distant trunks -->
+    <g fill="#182719" opacity=".9">
+      <polygon points="40,0 100,0 108,900 30,900"/>
+      <polygon points="230,0 280,0 290,900 222,900"/>
+      <polygon points="420,0 490,0 500,900 412,900"/>
+      <polygon points="640,0 690,0 698,900 632,900"/>
+      <polygon points="820,0 890,0 902,900 812,900"/>
+      <polygon points="1030,0 1085,0 1095,900 1022,900"/>
+      <polygon points="1230,0 1300,0 1312,900 1222,900"/>
+      <polygon points="1440,0 1490,0 1498,900 1432,900"/>
+    </g>
+    <rect y="260" width="1600" height="640" fill="url(#haze)"/>
+
+    <!-- sunlight through the canopy -->
+    <polygon points="1010,0 1100,0 780,900 520,900" fill="url(#shaft)"/>
+    <polygon points="1160,0 1220,0 1130,900 930,900" fill="url(#shaft)"/>
+    <polygon points="860,0 920,0 480,900 330,900" fill="url(#shaft)"/>
+
+    <!-- mid-distance trunks -->
+    <g fill="#101b12">
+      <polygon points="150,0 215,0 232,900 138,900"/>
+      <polygon points="520,0 610,0 632,900 506,900"/>
+      <polygon points="940,0 1010,0 1030,900 924,900"/>
+      <polygon points="1330,0 1415,0 1438,900 1312,900"/>
+    </g>
+    <rect y="420" width="1600" height="480" fill="url(#haze)" opacity=".8"/>
+
+    <!-- foreground giants framing the view -->
+    <g fill="#050806">
+      <polygon points="-40,0 120,0 150,900 -40,900"/>
+      <polygon points="1500,0 1660,0 1660,900 1470,900"/>
+    </g>
+
+    <!-- canopy -->
+    <g fill="#070d08">
+      <ellipse cx="0" cy="0" rx="190" ry="130"/>
+      <ellipse cx="210" cy="0" rx="170" ry="110"/>
+      <ellipse cx="430" cy="0" rx="180" ry="125"/>
+      <ellipse cx="650" cy="0" rx="170" ry="105"/>
+      <ellipse cx="870" cy="0" rx="180" ry="120"/>
+      <ellipse cx="1090" cy="0" rx="170" ry="100"/>
+      <ellipse cx="1310" cy="0" rx="180" ry="120"/>
+      <ellipse cx="1530" cy="0" rx="180" ry="130"/>
+    </g>
+    <g fill="#13231a" opacity=".7">
+      <ellipse cx="110" cy="90" rx="140" ry="62"/>
+      <ellipse cx="340" cy="100" rx="150" ry="58"/>
+      <ellipse cx="570" cy="86" rx="140" ry="60"/>
+      <ellipse cx="800" cy="96" rx="150" ry="56"/>
+      <ellipse cx="1030" cy="84" rx="140" ry="58"/>
+      <ellipse cx="1260" cy="98" rx="150" ry="60"/>
+      <ellipse cx="1480" cy="88" rx="140" ry="60"/>
+    </g>
+
+    <!-- undergrowth -->
+    <rect y="700" width="1600" height="200" fill="url(#floor)"/>
+    <g fill="#08120a">
+      <use href="#frond" transform="translate(40 900) scale(1.5)"/>
+      <use href="#frond" transform="translate(230 900) scale(-1.2 1.2)"/>
+      <use href="#frond" transform="translate(420 900) scale(1.1)"/>
+      <use href="#frond" transform="translate(640 900) scale(-1.6 1.5)"/>
+      <use href="#frond" transform="translate(880 900) scale(1.3)"/>
+      <use href="#frond" transform="translate(1100 900) scale(-1.4 1.3)"/>
+      <use href="#frond" transform="translate(1290 900) scale(1.7)"/>
+      <use href="#frond" transform="translate(1560 900) scale(-1.5 1.5)"/>
+    </g>
+  </svg>
+  <div class="mist m1"></div>
+  <div class="mist m2"></div>
+  <div class="vignette"></div>
+</div>
+
+<main>
+  <header class="profile">
+    <figure class="photo" id="photoFrame">
+      <img id="photo"
+           src="https://raw.githubusercontent.com/uuhjeike/SCOTTY/main/20261014_154938.jpg"
+           alt="SCOTTY, an enormous adult Tyrannosaurus rex"
+           decoding="async" fetchpriority="high" referrerpolicy="no-referrer">
+      <div class="photo-fallback" id="photoFallback" hidden>SCOTTY</div>
+    </figure>
+
+    <h1>SCOTTY</h1>
+    <p class="subtitle">The King of the Prehistoric World</p>
+    <p class="species">Tyrannosaurus rex, an exceptionally enormous adult</p>
+
+    <div class="count" role="status" aria-live="polite">
+      <strong id="countMain">Loading posts</strong>
+      <span id="countNote" class="count-note"></span>
+      <button type="button" id="retry" class="retry" hidden>Retry</button>
+    </div>
+  </header>
+
+  <section class="feed-wrap" aria-labelledby="feedTitle">
+    <h2 id="feedTitle" class="sr-only">Posts by SCOTTY</h2>
+    <div id="feed"></div>
+    <div id="skeletons" aria-hidden="true">
+      <div class="card skel"></div>
+      <div class="card skel"></div>
+      <div class="card skel"></div>
+    </div>
+    <p id="empty" class="empty" hidden></p>
+    <div id="sentinel" class="sentinel" hidden></div>
+  </section>
+</main>
+
+<noscript><p class="noscript">SCOTTY needs JavaScript to load its posts.</p></noscript>
+</body>
+</html>
